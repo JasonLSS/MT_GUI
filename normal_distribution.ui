@@ -580,7 +580,7 @@ QTabBar::tab:selected {
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>80</width>
+                     <width>160</width>
                      <height>80</height>
                     </size>
                    </property>
@@ -723,6 +723,12 @@ QTabBar::tab:selected {
                    <width>16777215</width>
                    <height>20</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>12</pointsize>
+                  </font>
                  </property>
                 </widget>
                </item>
@@ -975,7 +981,7 @@ QTabBar::tab:selected {
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>80</width>
+                     <width>160</width>
                      <height>80</height>
                     </size>
                    </property>

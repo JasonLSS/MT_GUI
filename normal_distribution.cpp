@@ -137,6 +137,7 @@ void normal_distribution::login_mainwindow(){
     qDebug()<<"mainwindow";
     MainWindow *win = new MainWindow;
     ResetAll();
+    ResetAll_2();
     win->show();
     this->close();
 }
