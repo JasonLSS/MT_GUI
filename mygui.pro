@@ -29,17 +29,20 @@ SOURCES += \
         mainwindow.cpp \
     normal_distribution.cpp \
     fitting_method.cpp \
+    compare_normal.cpp
 
 HEADERS += \
         mainwindow.h \
     normal_distribution.h \
     fitting_method.h \
+    compare_normal.h
 
 
 FORMS += \
         mainwindow.ui \
     normal_distribution.ui \
-    fitting_method.ui
+    fitting_method.ui \
+    compare_normal.ui
 
 
 RESOURCES += \

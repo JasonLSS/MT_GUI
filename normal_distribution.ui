@@ -235,199 +235,54 @@ QPushButton#btnExit:hover{
     </item>
     <item>
      <widget class="QWidget" name="widget" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,1">
+      <layout class="QVBoxLayout" name="verticalLayout_8">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="8,1">
-         <item>
-          <widget class="QtCharts::QChartView" name="graphicsView">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>100</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1,0">
-           <property name="spacing">
-            <number>6</number>
-           </property>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTabWidget::pane{top:-1px;}
+QTabWidget QStackedWidget{
+    background: transparent;    
+}
+
+QTabBar::tab{
+	background:transparent;
+	color:black;
+	min-width:30ex;
+}
+QTabBar::tab:hover{
+	background:rgb(255,255,255,100);
+}
+
+QTabBar::tab:selected {
+	color: blue;
+	background:white;
+	border-color:white;
+};</string>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>数据一</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="3,1">
            <item>
-            <widget class="QLabel" name="label">
-             <property name="font">
-              <font>
-               <family>微软雅黑</family>
-               <pointsize>12</pointsize>
-              </font>
+            <layout class="QVBoxLayout" name="verticalLayout_3" stretch="8,1">
+             <property name="spacing">
+              <number>5</number>
              </property>
-             <property name="text">
-              <string>数据输入</string>
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="addLine">
-             <property name="minimumSize">
-              <size>
-               <width>15</width>
-               <height>20</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>20</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="addBtn">
-             <property name="text">
-              <string>添加</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,7,3,1">
-         <item>
-          <widget class="QLabel" name="label_4">
-           <property name="font">
-            <font>
-             <family>微软雅黑</family>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>数据列表</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QListWidget" name="listWidget"/>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,2,2">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,1,0,0">
              <item>
-              <widget class="QLabel" name="label_2">
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>微软雅黑</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>最大极限尺寸</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="maxLine">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>微软雅黑</family>
-                </font>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="maxCorrect">
-               <property name="minimumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,0,2,0">
-             <item>
-              <widget class="QLabel" name="label_3">
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>微软雅黑</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>最小极限尺寸</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="minLine">
-               <property name="maximumSize">
-                <size>
-                 <width>100</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>微软雅黑</family>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="minCorrect">
+              <widget class="QtCharts::QChartView" name="graphicsView">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -436,34 +291,70 @@ QPushButton#btnExit:hover{
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>20</width>
-                 <height>20</height>
+                 <width>100</width>
+                 <height>100</height>
                 </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_8">
-               <property name="text">
-                <string/>
+              <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1,0">
+               <property name="spacing">
+                <number>6</number>
                </property>
-              </widget>
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>数据输入</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="addLine">
+                 <property name="minimumSize">
+                  <size>
+                   <width>15</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="addBtn">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,7,3,1">
+             <property name="spacing">
+              <number>5</number>
+             </property>
              <item>
-              <widget class="QLabel" name="label_5">
+              <widget class="QLabel" name="label_4">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -471,35 +362,394 @@ QPushButton#btnExit:hover{
                 </font>
                </property>
                <property name="text">
-                <string>合格率：</string>
+                <string>数据列表</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="Correct_percent">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>40</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
+              <widget class="QListWidget" name="listWidget">
+               <property name="font">
+                <font>
+                 <family>微软雅黑</family>
+                 <pointsize>13</pointsize>
+                </font>
                </property>
               </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,2,2">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,1,0,0">
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>最大极限尺寸</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="maxLine">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                    </font>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="maxCorrect">
+                   <property name="minimumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,0,2,0">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>最小极限尺寸</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="minLine">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="minCorrect">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>合格率：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="Correct_percent">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>160</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>常值系统误差：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="Constant_error">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QPushButton" name="calcBtn">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>15</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>计算</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="resetBtn">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>16</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>清空</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>数据二</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="3,1">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_5" stretch="8,1">
+             <property name="spacing">
+              <number>5</number>
+             </property>
+             <property name="sizeConstraint">
+              <enum>QLayout::SetDefaultConstraint</enum>
+             </property>
+             <item>
+              <widget class="QtCharts::QChartView" name="graphicsView_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>100</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,1,0">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>数据输入</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="addLine_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>15</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="addBtn_2">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,7,3,1">
+             <property name="spacing">
+              <number>5</number>
+             </property>
              <item>
-              <widget class="QLabel" name="label_7">
+              <widget class="QLabel" name="label_10">
                <property name="font">
                 <font>
                  <family>微软雅黑</family>
@@ -507,88 +757,313 @@ QPushButton#btnExit:hover{
                 </font>
                </property>
                <property name="text">
-                <string>常值系统误差：</string>
+                <string>数据列表</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="Constant_error">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>40</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>80</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
+              <widget class="QListWidget" name="listWidget_2">
+               <property name="font">
+                <font>
+                 <family>微软雅黑</family>
+                 <pointsize>13</pointsize>
+                </font>
                </property>
               </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,1,2,2">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="0,1,0,0">
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>最大极限尺寸</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="maxLine_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                    </font>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="maxCorrect_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="0,0,2,0">
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>最小极限尺寸</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="minLine_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="minCorrect_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_14">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QLabel" name="label_15">
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>合格率：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="Correct_percent_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>160</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>常值系统误差：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="Constant_error_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <widget class="QPushButton" name="calcBtn_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>15</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>计算</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="resetBtn_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>16</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>清空</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </item>
           </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
-           <item>
-            <widget class="QPushButton" name="calcBtn">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>计算</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="resetBtn">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>清空</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string/>
+          </attribute>
+         </widget>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -602,6 +1077,22 @@ QPushButton#btnExit:hover{
   </action>
   <action name="actionRemove">
    <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="actionAdd_2">
+   <property name="text">
+    <string>添加</string>
+   </property>
+   <property name="toolTip">
+    <string>添加</string>
+   </property>
+  </action>
+  <action name="actionRemove_2">
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="toolTip">
     <string>删除</string>
    </property>
   </action>

@@ -52,6 +52,19 @@ public:
     float                   m_fMinY;
 
     bool mDrag;
+    static double maxValue;
+    static double minValue;
+    static double maxValue_2;
+    static double minValue_2;
+    static double average;
+    static double deviation;
+    static double average_2;
+    static double deviation_2;
+    static double correct_percent;
+    static double correct_percent_2;
+    static double constant_error;
+    static double constant_error_2;
+
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event);
@@ -80,6 +93,20 @@ private slots:
     void CalcNumber();
     void UpdateConstantError(double error);
     void UpdateChart(double deviation,double average);
+    void CompareChartWindows();
+
+    void AddItem_2();
+    void ItemMenu_2(const QPoint& pt);
+    void OnMenuAdd_2();
+    void OnMenuRemove_2();
+    void UpdateMax_2();
+    void UpdateMin_2();
+    void ResetAll_2();
+    void UpdateCorrect_2(double percent);
+    void sortItemsSelf_2();
+    void CalcNumber_2();
+    void UpdateConstantError_2(double error);
+    void UpdateChart_2(double deviation,double average);
 
 
 private:
