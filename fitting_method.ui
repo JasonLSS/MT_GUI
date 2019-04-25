@@ -235,67 +235,70 @@ QPushButton#btnExit:hover{
     </item>
     <item>
      <widget class="QWidget" name="widget" native="true">
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <pointsize>30</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>看什么看，没做完呢...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,1,1">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
-             <item>
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="font">
-              <font>
-               <pointsize>15</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>肝疼...</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_5">
-             <item>
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-        </layout>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTabWidget::pane{left:-1px;top:-1px;right:-1px;}
+
+QTabWidget QStackedWidget{
+    background: transparent;    
+}
+
+QTabBar::tab{
+	background: transparent;
+	color:black;
+	min-width:20ex;
+	border:1px solid #F7F3F7;
+	border-bottom-color:#F7F3F7;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:3px;
+	padding-bottom:2px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+
+}
+QTabBar::tab:hover{
+	background:rgb(255,255,255,100);
+}
+
+QTabBar::tab:selected {
+	color: blue;
+	background:white;
+	border-color:white;
+};</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>数据一</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_9" stretch=""/>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>数据二</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_16" stretch=""/>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string/>
+          </attribute>
+         </widget>
+        </widget>
        </item>
       </layout>
      </widget>

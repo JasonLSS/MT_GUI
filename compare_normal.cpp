@@ -1,6 +1,6 @@
 ﻿#include "compare_normal.h"
 #include "ui_compare_normal.h"
-
+#pragma execution_character_set("utf-8")
 const int g_nBorder = 6;
 
 compare_normal::compare_normal(QWidget *parent) :
@@ -90,7 +90,7 @@ void compare_normal::UpdateChart(double deviation,double average){
 
         QChart *chart = new QChart();
         chart->setTheme(QChart::ChartThemeBlueCerulean);//设置系统主题
-//        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
+        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
         chart->setDropShadowEnabled(true);
         chart->setLocalizeNumbers(true);//数字是否本地化
         chart->addSeries(series1);//添加系列到QChart上
@@ -172,7 +172,7 @@ void compare_normal::UpdateChart_2(double deviation,double average){
 
         QChart *chart = new QChart();
         chart->setTheme(QChart::ChartThemeBlueCerulean);//设置系统主题
-//        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
+        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
         chart->setDropShadowEnabled(true);
         chart->setLocalizeNumbers(true);//数字是否本地化
         chart->addSeries(series1);//添加系列到QChart上

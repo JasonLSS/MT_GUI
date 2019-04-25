@@ -245,15 +245,25 @@ QPushButton#btnExit:hover{
           </sizepolicy>
          </property>
          <property name="styleSheet">
-          <string notr="true">QTabWidget::pane{top:-1px;}
+          <string notr="true">QTabWidget::pane{left:-1px;top:-1px;right:-1px;}
+
 QTabWidget QStackedWidget{
     background: transparent;    
 }
 
 QTabBar::tab{
-	background:transparent;
+	background: transparent;
 	color:black;
-	min-width:30ex;
+	min-width:20ex;
+	border:1px solid #F7F3F7;
+	border-bottom-color:#F7F3F7;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:3px;
+	padding-bottom:2px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+
 }
 QTabBar::tab:hover{
 	background:rgb(255,255,255,100);
@@ -948,6 +958,11 @@ QTabBar::tab:selected {
                      <width>160</width>
                      <height>80</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                    </font>
                    </property>
                    <property name="text">
                     <string/>

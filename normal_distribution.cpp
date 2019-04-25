@@ -1,7 +1,7 @@
 ﻿#include "normal_distribution.h"
 #include "ui_normal_distribution.h"
 #include <compare_normal.h>
-
+#pragma execution_character_set("utf-8")
 const int g_nBorder = 6;
 double normal_distribution::maxValue = 0.0001;
 double normal_distribution::minValue = 0.0001;
@@ -16,7 +16,7 @@ double normal_distribution::correct_percent_2;
 double normal_distribution::constant_error;
 double normal_distribution::constant_error_2;
 static QImage* img=new QImage,* wrong_img=new QImage,* correct_img = new QImage;
-static bool cDrag;
+//static bool cDrag;
 
 normal_distribution::normal_distribution(QWidget *parent) :
     QMainWindow(parent),
@@ -30,7 +30,6 @@ normal_distribution::normal_distribution(QWidget *parent) :
     mLocation = this->geometry();
     mIsMax = false;
     mDrag = false;
-
     //标题栏基本图标设置
     ui->widgetTitle->installEventFilter(this);
     ui->btnMin->setIcon(QIcon(":/image/min.png"));
@@ -597,7 +596,7 @@ void normal_distribution::UpdateChart(double deviation,double average){
 
         QChart *chart = new QChart();
         chart->setTheme(QChart::ChartThemeBlueCerulean);//设置系统主题
-//        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
+        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
         chart->setDropShadowEnabled(true);
         chart->setLocalizeNumbers(true);//数字是否本地化
         chart->addSeries(series1);//添加系列到QChart上
@@ -679,7 +678,7 @@ void normal_distribution::UpdateChart_2(double deviation,double average){
 
         QChart *chart = new QChart();
         chart->setTheme(QChart::ChartThemeBlueCerulean);//设置系统主题
-//        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
+        chart->setAnimationOptions(QChart::AllAnimations);//设置启用或禁用动画
         chart->setDropShadowEnabled(true);
         chart->setLocalizeNumbers(true);//数字是否本地化
         chart->addSeries(series1);//添加系列到QChart上
@@ -835,41 +834,41 @@ void normal_distribution::mouseReleaseEvent(QMouseEvent *e)//鼠标释放事件
 
 }
 
-void QtCharts::QChartView::mousePressEvent(QMouseEvent *e){
-    if (e->button() == Qt::LeftButton)
-    {
-        cDrag = true;
-    }
-}
+//void QtCharts::QChartView::mousePressEvent(QMouseEvent *e){
+//    if (e->button() == Qt::LeftButton)
+//    {
+//        cDrag = true;
+//    }
+//}
 
-void QtCharts::QChartView::mouseMoveEvent(QMouseEvent *event)//鼠标移动事件
-{
-    int x,y;
-    static int xOld = 0,yOld = 0;
-    if (cDrag) {
-        if (xOld == 0 && yOld == 0) {
+//void QtCharts::QChartView::mouseMoveEvent(QMouseEvent *event)//鼠标移动事件
+//{
+//    int x,y;
+//    static int xOld = 0,yOld = 0;
+//    if (cDrag) {
+//        if (xOld == 0 && yOld == 0) {
 
-        } else {
-            x = event->x() - xOld;
-            y = event->y() - yOld;
-            chart()->scroll(- x, y);
-        }
-        xOld = event->x();
-        yOld = event->y();
-    }
-    else{
-        xOld = 0;
-        yOld = 0;
-    }
-}
+//        } else {
+//            x = event->x() - xOld;
+//            y = event->y() - yOld;
+//            chart()->scroll(- x, y);
+//        }
+//        xOld = event->x();
+//        yOld = event->y();
+//    }
+//    else{
+//        xOld = 0;
+//        yOld = 0;
+//    }
+//}
 
-void normal_distribution::ChartMove(int x,int y){
-    ui->graphicsView->chart()->scroll(x, y);
-}
+//void normal_distribution::ChartMove(int x,int y){
+//    ui->graphicsView->chart()->scroll(x, y);
+//}
 
-void QtCharts::QChartView::mouseReleaseEvent(QMouseEvent *event){
-    cDrag = false;
-}
+//void QtCharts::QChartView::mouseReleaseEvent(QMouseEvent *event){
+//    cDrag = false;
+//}
 //最小化
 void normal_distribution::on_btnMin_clicked()
 {

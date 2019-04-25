@@ -25,9 +25,10 @@ fitting_method::fitting_method(QWidget *parent) :
     ui->btnBack->setIcon(QIcon(":/image/back.png"));
 
     setMouseTracking(true);
-    setStyleSheet("QMainWindow{color:#E8E8E8;background:#43CD80;}");
+    setStyleSheet("QMainWindow{color:#E8E8E8;}");
 
     connect(ui->btnBack,SIGNAL(clicked(bool)),this,SLOT(login_mainwindow()));
+    ui->tabWidget->setTabEnabled(2, false);
 
 }
 
