@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 #include <QMouseEvent>
+#include <QDebug>
+#include <QDesktopWidget>
+#include <qt_windows.h>
+#include <QMenu>
+#include <QCheckBox>
 
 namespace Ui {
 class fitting_method;
@@ -28,6 +33,10 @@ private slots:
     void on_btnMax_clicked();
     void on_btnExit_clicked();
     void login_mainwindow();
+    void OnMenuAdd();
+    void OnMenuRemove();
+    void ItemMenu(const QPoint& pt);
+    void settingTableChanged (int row, int col);
 
 private:
     Ui::fitting_method *ui;
