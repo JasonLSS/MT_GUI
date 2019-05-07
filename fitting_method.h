@@ -1,4 +1,4 @@
-#ifndef FITTING_METHOD_H
+﻿#ifndef FITTING_METHOD_H
 #define FITTING_METHOD_H
 
 #include <QMainWindow>
@@ -8,6 +8,8 @@
 #include <qt_windows.h>
 #include <QMenu>
 #include <QCheckBox>
+#include <QTableWidget>
+#include <QMessageBox>
 
 namespace Ui {
 class fitting_method;
@@ -36,7 +38,10 @@ private slots:
     void OnMenuAdd();
     void OnMenuRemove();
     void ItemMenu(const QPoint& pt);
-    void settingTableChanged (int row, int col);
+    void SettingTableChanged (int row, int col);
+    void CalcNumber();
+    void EditChanged(QTableWidgetItem *);
+    bool IsNumber(QString &qstrSrc);
 
 private:
     Ui::fitting_method *ui;
@@ -46,6 +51,12 @@ private:
     bool mIsMax;
     QRect mLocation;
     QFont mIconFont;
+
 };
 
+struct Value{
+    float basic;
+    float Up_deviation;
+    float Low_deviation;
+};
 #endif // FITTING_METHOD_H

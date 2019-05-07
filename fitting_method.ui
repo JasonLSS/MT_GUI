@@ -283,16 +283,28 @@ QTabBar::tab:selected {
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
-           <string>数据一</string>
+           <string>孔类</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
             <widget class="QTableWidget" name="tableWidget">
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>12</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
              <property name="styleSheet">
               <string notr="true">QTableWidget
 {
 alternate-background-color:rgb(48,51,55);
 selection-background-color:rgb(43,125,255);
+}
+QTableWidget::indicator {
+    width: 40px;
+    height: 40px;
 }
 
 QHeaderView::section
@@ -304,6 +316,23 @@ padding-left: 4px;border: 1px solid #383838;
 
 </string>
              </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+             </property>
+             <property name="rowCount">
+              <number>3</number>
+             </property>
+             <property name="columnCount">
+              <number>5</number>
+             </property>
+             <row/>
+             <row/>
+             <row/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
             </widget>
            </item>
            <item>
@@ -347,6 +376,19 @@ padding-left: 4px;border: 1px solid #383838;
                </property>
               </spacer>
              </item>
+             <item>
+              <widget class="QPushButton" name="CalcButton">
+               <property name="font">
+                <font>
+                 <family>微软雅黑</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>计算</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
@@ -355,31 +397,142 @@ padding-left: 4px;border: 1px solid #383838;
               <layout class="QGridLayout" name="gridLayout">
                <item row="0" column="0">
                 <widget class="QLabel" name="label_2">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>修配环尺寸：</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="label">
                  <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QLabel" name="label_3">
-                 <property name="text">
-                  <string>TextLabel</string>
+                  <string>about：</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
                 <widget class="QLabel" name="label_4">
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>contiune</string>
                  </property>
                 </widget>
+               </item>
+               <item row="0" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="font">
+                    <font>
+                     <family>黑体</family>
+                     <pointsize>32</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <item>
+                    <spacer name="verticalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>黑体</family>
+                       <pointsize>20</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>+0</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_6">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>黑体</family>
+                       <pointsize>20</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="text">
+                      <string>-0</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </item>
               </layout>
              </item>
@@ -389,7 +542,7 @@ padding-left: 4px;border: 1px solid #383838;
          </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">
-           <string>数据二</string>
+           <string>轴类</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_16"/>
          </widget>

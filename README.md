@@ -3,6 +3,12 @@ Mechanical Technology Gui on QT
 
 # Versions 
 
+## v1.2.6
+- Fix checkbox BUG.
+- Add number check and error prompt color.
+- Modified table style.
+- Add value struct.
+
 ## v1.2.5
 - Add tableWidget.
 - [BUG]checkbox in table can not recognize.
