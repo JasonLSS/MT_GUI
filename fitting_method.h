@@ -10,7 +10,21 @@
 #include <QCheckBox>
 #include <QTableWidget>
 #include <QMessageBox>
+#include <QtCore/qmath.h>
 
+enum Type{
+    Hold = 0,
+    Shaft = 1,
+};
+
+struct Value{
+    double basic;
+    double Up_deviation;
+    double Low_deviation;
+    Type type;
+    int tolerance;
+
+};
 namespace Ui {
 class fitting_method;
 }
@@ -42,6 +56,11 @@ private slots:
     void CalcNumber();
     void EditChanged(QTableWidgetItem *);
     bool IsNumber(QString &qstrSrc);
+    void Basic_changed(int basic);
+    void Calc_Ring(Value *ring,int row);
+    double Low_Sheet(double basic,int tolerance,Type type);
+    double Up_Sheet(double basic,int tolerance,Type type);
+    void ResetAll();
 
 private:
     Ui::fitting_method *ui;
@@ -54,9 +73,6 @@ private:
 
 };
 
-struct Value{
-    float basic;
-    float Up_deviation;
-    float Low_deviation;
-};
+
+
 #endif // FITTING_METHOD_H

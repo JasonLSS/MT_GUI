@@ -283,9 +283,9 @@ QTabBar::tab:selected {
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
-           <string>孔类</string>
+           <string>数据一</string>
           </attribute>
-          <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="5,1,0">
            <item>
             <widget class="QTableWidget" name="tableWidget">
              <property name="font">
@@ -364,6 +364,19 @@ padding-left: 4px;border: 1px solid #383838;
               </widget>
              </item>
              <item>
+              <widget class="QPushButton" name="ResetButton">
+               <property name="font">
+                <font>
+                 <family>微软雅黑</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+             <item>
               <spacer name="verticalSpacer">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -396,7 +409,7 @@ padding-left: 4px;border: 1px solid #383838;
              <item>
               <layout class="QGridLayout" name="gridLayout">
                <item row="0" column="0">
-                <widget class="QLabel" name="label_2">
+                <widget class="QLabel" name="label_7">
                  <property name="font">
                   <font>
                    <family>微软雅黑</family>
@@ -406,28 +419,26 @@ padding-left: 4px;border: 1px solid #383838;
                   </font>
                  </property>
                  <property name="text">
-                  <string>修配环尺寸：</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>about：</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="label_4">
-                 <property name="text">
-                  <string>contiune</string>
+                  <string>基本公差：</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="1">
+                <widget class="QSpinBox" name="spinBox">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
                 <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
                  <item>
-                  <widget class="QLabel" name="label_3">
+                  <widget class="QLabel" name="Fix_basic">
                    <property name="font">
                     <font>
                      <family>黑体</family>
@@ -457,16 +468,16 @@ padding-left: 4px;border: 1px solid #383838;
                     </spacer>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_5">
+                    <widget class="QLabel" name="Fix_up">
                      <property name="minimumSize">
                       <size>
-                       <width>30</width>
+                       <width>100</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>30</width>
+                       <width>100</width>
                        <height>16777215</height>
                       </size>
                      </property>
@@ -485,16 +496,16 @@ padding-left: 4px;border: 1px solid #383838;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_6">
+                    <widget class="QLabel" name="Fix_low">
                      <property name="minimumSize">
                       <size>
-                       <width>30</width>
+                       <width>100</width>
                        <height>0</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>30</width>
+                       <width>100</width>
                        <height>16777215</height>
                       </size>
                      </property>
@@ -534,6 +545,21 @@ padding-left: 4px;border: 1px solid #383838;
                  </item>
                 </layout>
                </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="font">
+                  <font>
+                   <family>微软雅黑</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>修配环尺寸：</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </item>
             </layout>
@@ -542,7 +568,7 @@ padding-left: 4px;border: 1px solid #383838;
          </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">
-           <string>轴类</string>
+           <string>数据二</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_16"/>
          </widget>

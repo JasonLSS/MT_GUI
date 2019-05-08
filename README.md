@@ -2,6 +2,13 @@
 Mechanical Technology Gui on QT
 
 # Versions 
+## v1.3.0
+- First complete calc.
+- Change the input item.
+- Add number protected.
+- Add reset.
+- Add spinbox for Basic deviation.
+
 
 ## v1.2.6
 - Fix checkbox BUG.
