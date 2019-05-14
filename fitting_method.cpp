@@ -117,10 +117,11 @@ void fitting_method::OnMenuAdd() {
     ui->tableWidget->setItem(row,2,check3);
     check3->setFlags(check3->flags() & (~Qt::ItemIsEditable));
 
-    ui->tableWidget->setItem(row,3,new QTableWidgetItem);
+
     ui->tableWidget->setItem(row,4,new QTableWidgetItem);
     ui->tableWidget->setItem(row,5,new QTableWidgetItem);
     ui->tableWidget->setItem(row,6,new QTableWidgetItem);
+    ui->tableWidget->setItem(row,3,new QTableWidgetItem);
     ui->tableWidget->item(row,3)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
     ui->tableWidget->item(row,4)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
     ui->tableWidget->item(row,5)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
@@ -507,10 +508,10 @@ void fitting_method::ResetAll(){
         ui->tableWidget->setItem(i,2,check3);
         check3->setFlags(check3->flags() & (~Qt::ItemIsEditable));
 
-        ui->tableWidget->setItem(i,3,new QTableWidgetItem);
         ui->tableWidget->setItem(i,4,new QTableWidgetItem);
         ui->tableWidget->setItem(i,5,new QTableWidgetItem);
         ui->tableWidget->setItem(i,6,new QTableWidgetItem);
+        ui->tableWidget->setItem(i,3,new QTableWidgetItem);
         ui->tableWidget->item(i,3)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
         ui->tableWidget->item(i,4)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
         ui->tableWidget->item(i,5)->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter);

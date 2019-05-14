@@ -2,6 +2,10 @@
 Mechanical Technology Gui on QT
 
 # Versions 
+
+## v1.3.1
+- Fix the bug of crash when add new item.(But not now why?just change the sequence.)
+
 ## v1.3.0
 - First complete calc.
 - Change the input item.
