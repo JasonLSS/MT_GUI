@@ -475,9 +475,12 @@ void normal_distribution::CalcNumber(){
         normal_distribution::deviation += (normal_distribution::average - number[i])*(normal_distribution::average - number[i]);
     }
     normal_distribution::deviation = sqrt(normal_distribution::deviation/number.count());
-
-    UpdateCorrect(normal_distribution::average);
-    if((normal_distribution::maxValue < (normal_distribution::average - 3 * normal_distribution::deviation))||(normal_distribution::minValue > (normal_distribution::average + 3 * normal_distribution::deviation))){
+    if(abs(normal_distribution::deviation) <= 0.0000001){
+        QMessageBox::about(this, tr("error"), tr("数据表内容有误"));
+        return;
+    }
+    if((normal_distribution::maxValue < (normal_distribution::average - 3 * normal_distribution::deviation))||
+            (normal_distribution::minValue > (normal_distribution::average + 3 * normal_distribution::deviation))){
         QMessageBox::about(this,tr("about"),tr("全不合格"));
         return;
     }
@@ -488,7 +491,8 @@ void normal_distribution::CalcNumber(){
     double step = temp/1000;
     for(int j = 0;j<1000;j++){
         double x = normal_distribution::minValue + j*step;
-        sumcorrect += 0.39894228/normal_distribution::deviation*qExp(-(x-normal_distribution::average)*(x-normal_distribution::average)/2/normal_distribution::deviation/normal_distribution::deviation)*step;
+        sumcorrect += 0.39894228/normal_distribution::deviation*qExp(-(x-normal_distribution::average)*
+                    (x-normal_distribution::average)/2/normal_distribution::deviation/normal_distribution::deviation)*step;
     }
     correct += abs(sumcorrect);
     UpdateCorrect(correct);
@@ -523,7 +527,10 @@ void normal_distribution::CalcNumber_2(){
         normal_distribution::deviation_2 += (normal_distribution::average_2 - number[i])*(normal_distribution::average_2 - number[i]);
     }
     normal_distribution::deviation_2 = sqrt(normal_distribution::deviation_2/number.count());
-
+    if(abs(normal_distribution::deviation_2) <= 0.0000001){
+        QMessageBox::about(this, tr("error"), tr("数据表内容有误"));
+        return;
+    }
     if((normal_distribution::maxValue_2 < (normal_distribution::average_2 - 3 * normal_distribution::deviation_2))||(normal_distribution::minValue_2 > (normal_distribution::average_2 + 3 * normal_distribution::deviation_2))){
         QMessageBox::about(this,tr("about"),tr("全不合格"));
         return;

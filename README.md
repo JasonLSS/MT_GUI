@@ -3,6 +3,10 @@ Mechanical Technology Gui on QT
 
 # Versions 
 
+## v1.3.2
+- Fix the bug of calc the same number output error.
+- Add limit to the spinbox input.
+
 ## v1.3.1
 - Fix the bug of crash when add new item.(But not now why?just change the sequence.)
 

@@ -391,7 +391,23 @@ bool fitting_method::IsNumber(QString &qstrSrc)
 }
 
 void fitting_method::Basic_changed(int basic){
-    Basic_deviation = basic;
+
+    if(basic < 5){
+        QMessageBox::about(this,tr("warning"),tr("请输入数字5~14！"));
+        Basic_deviation = 5;
+        ui->spinBox->setValue(5);
+        return;
+    }
+    else if(basic > 14){
+        QMessageBox::about(this,tr("warning"),tr("请输入数字5~14！"));
+        Basic_deviation = 14;
+        ui->spinBox->setValue(14);
+        return;
+    }
+    else{
+        Basic_deviation = basic;
+    }
+
 }
 
 void fitting_method::Calc_Ring(Value *ring,int row){
